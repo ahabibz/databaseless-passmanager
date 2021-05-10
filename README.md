@@ -1,2 +1,2 @@
 # databaseless-passmanager
-A password manager generating unique non-random irreversible passwords so that it does not need a database
+A password manager generating unique non-random irreversible passwords from the master phrase so that it does not need a database.

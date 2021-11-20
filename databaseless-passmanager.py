@@ -1,20 +1,19 @@
 import hashlib
 import pyperclip
  
-def sha1_generator(str):
-    m = hashlib.sha1()
-    m.update(str.encode())
-    return m.hexdigest()
+def hash(str):
+    return hashlib.sha256(str).hexdigest()
+    
 
 while True:
     site = input("Site: ")
     username = input("Username: ")
     password = input("Password: ")
 
-    normal = sha1_generator(site + username + password)
-    special = sha1_generator(username + password + site)
-    upper = sha1_generator(password + site + username)
-    num = sha1_generator(password + username + site)
+    normal = hash(site + username + password)
+    special = hash(username + password + site)
+    upper = hash(password + site + username)
+    num = hash(password + username + site)
 
     result = ""
 
